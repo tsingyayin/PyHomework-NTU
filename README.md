@@ -5,6 +5,4 @@ This project contains script that be used in Python class and the class's homewo
 
 请务必注意，由于本人比较厌烦反复完成某个特定需求或者反复完成某类近似需求， 因此本人写的代码在后期尝试引入（import）自己的库文件（头文件），比如说用于操作列表的lstedit， lstedit里面有用于分离字母和数字的sepa()函数等等……
 
-类似lstedit这样的个人库出于某些必要是不公开的（至少目前如此），因此当我在作业中使用了这些库的时候，我会在代码注释中标明函数所完成的操作，共各位自行补齐。
-
-lstedit库已经更名为commonedit库
+lstedit库已经更名为commonedit库，将纳入不定期更新。
