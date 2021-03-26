@@ -11,29 +11,18 @@ while Dynamic1<len(lst_suit):
     Dynamic1+=1
 
 import random as rnd
-rnd.shuffle(lst)
-print(lst)
+lstrnd=[]
+lstrnd+=lst
+rnd.shuffle(lstrnd)
+print(lstrnd)
 
-lstraw=[]
-lstraw+=lst
-Dynamic=0
-while Dynamic<len(lst):
-     lst[Dynamic]=lst[Dynamic].replace("J","11")
-     lst[Dynamic]=lst[Dynamic].replace("Q","13")
-     lst[Dynamic]=lst[Dynamic].replace("K","14")
-     lst[Dynamic]=lst[Dynamic].replace("A","15")
-     lst[Dynamic]=lst[Dynamic].replace("2","16")
-     Dynamic += 1
-import commonedit as comet                                  #请注意，这里使用了commonedit，请下载Commonedit Library里面的Commonedit.py文件
-Dynamic=0
-while Dynamic<len(lst):    
-    lst[Dynamic]=comet.sepa(lst[Dynamic],"toga")[1] 
-    Dynamic += 1
-INPUT=int(input("请输入牌面序号"))
-rndint=rnd.randint(0,51)
-SysOut=int(lst[rndint])
-UsrGus=int(lst[INPUT])
-if UsrGus>SysOut: print("您猜的数是{},系统选的是{},您赢了！".format(lstraw(INPUT),lstraw(rndint)))
-elif UsrGus==SysOut: print("您猜的数是{},系统选的是{},平局！".format(lstraw(INPUT),lstraw(rndint)))
-elif UsrGus<SysOut: print("您猜的数是{},系统选的是{},您输了！".format(lstraw(INPUT),lstraw(rndint)))
-else: print("???")
+import commonedit as comet                           #请注意这里用了Commonedit，请到Commonedit Library下载Commonedit.py
+#这是经同学点拨之后我重新想的一个算法
+#首先让系统自己随机一个数字
+SysOut=str(lstrnd[rnd.randint(0,51)])                     #把系统牌抽出来
+UsrOut=str(lstrnd[int(comet.inrange(0,51,"T","T"))])      #把用户牌抽出来 
+SysRAW=lst.index(SysOut)#查询两张牌在原始列表的位置
+UsrRAW=lst.index(UsrOut)#既然不看花色，那么只需看每张牌在每个花色组里面的位置即可，即除以四取余                         
+if (SysRAW%13)>(UsrRAW%13) : print("系统牌是{}，您的牌是{}，您输了！".format(SysOut,UsrOut))
+if (SysRAW%13)==(UsrRAW%13) : print("系统牌是{}，您的牌是{}，平局！".format(SysOut,UsrOut))
+if (SysRAW%13)<(UsrRAW%13) : print("系统牌是{}，您的牌是{}，您赢了！".format(SysOut,UsrOut))
