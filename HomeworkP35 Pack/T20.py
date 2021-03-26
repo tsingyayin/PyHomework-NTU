@@ -24,10 +24,10 @@ while Dynamic<len(lst):
      lst[Dynamic]=lst[Dynamic].replace("A","15")
      lst[Dynamic]=lst[Dynamic].replace("2","16")
      Dynamic += 1
-import commonedit as comet
+import commonedit as comet                                  #请注意，这里使用了commonedit，请下载Commonedit Library里面的Commonedit.py文件
 Dynamic=0
-while Dynamic<len(lst):
-    lst[Dynamic]=comet.sepa(lst[Dynamic],"toga")[1]
+while Dynamic<len(lst):    
+    lst[Dynamic]=comet.sepa(lst[Dynamic],"toga")[1] 
     Dynamic += 1
 INPUT=int(input("请输入牌面序号"))
 rndint=rnd.randint(0,51)
