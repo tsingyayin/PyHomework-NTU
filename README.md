@@ -3,6 +3,4 @@ This project contains scripts that be used in Python class and the class's homew
 
 如需联系我，QQ找1412398895，亿绪SIN码一项请回Gi 00 01 00
 
-请务必注意，由于本人比较厌烦反复完成某个特定需求或者反复完成某类近似需求， 因此本人写的代码在后期尝试引入（import）自己的库文件（头文件），比如说用于操作列表的lstedit， lstedit里面有用于分离字母和数字的sepa()函数等等……
-
-lstedit库已经更名为commonedit库，将纳入不定期更新。
+请务必注意，由于本人比较厌烦反复完成某个特定需求或者反复完成某类近似需求， 因此本人写的代码在后期尝试引入（import）自己的库文件（头文件），比如说用于操作列表的commonedit， commonedit里面有用于分离字母和数字的sepa()函数等等,commonedit库在线下本人的本地仓库中位于HomeworkP35 Pack里面，现在直接放到Commonedit Library进行不定期更新————遇到新的通用编辑需求我就会更新。
